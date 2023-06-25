@@ -1,0 +1,32 @@
+# Test endpoints
+
+# Home
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+# Retrieve Events
+GET http://127.0.0.1:8000/events
+Accept: application/json
+Authorization: Basic {{username}} {{password}}
+
+###
+
+# Retrieve Events based on specified fields
+GET http://127.0.0.1:8000/events/query?event_type=account_created
+Accept: application/json
+Authorization: Basic {{username}} {{password}}
+
+###
+
+# Submit Event
+POST http://127.0.0.1:8000/events/create
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "event_type": "resource_added",
+  "event_data": "customer_id:XX004;account_number:123004;resource_id:12;",
+  "reason": "A resource was added."
+}

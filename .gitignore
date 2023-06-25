@@ -1,0 +1,12 @@
+.vscode/*
+.history
+__pycache__/
+*.py[cod]
+*$py.class
+.idea
+.idea/*
+.env
+.venv
+env/
+venv/
+.bak
